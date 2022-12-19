@@ -17,7 +17,7 @@ image = st.file_uploader(label = "Upload your image here",type=['png','jpg','jpe
 
 @st.cache
 def load_model(): 
-    reader = ocr.Reader(['en'],model_storage_directory='.')
+    reader = ocr.Reader(['en','ja'],model_storage_directory='.')
     return reader 
 
 reader = load_model() #load model
